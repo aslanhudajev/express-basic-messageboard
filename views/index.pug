@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Bullet - The Messageboard
+        link(rel="stylesheet", type="text/css", href="/style.css")
+    body(class=" bg-gray-100")
+        header(class="flex flex-row items-center justify-start h-10 w-full p-4 text-xl")
+            h1 Bullet
+        main(class="p-4 flex flex-col mb-8 items-center")
+            div(class="post-form p-4 bg-white rounded-2xl mb-16 w-1/2")
+                form(action="/new", method="POST" class="flex flex-col gap-2 items-center justify-between grow")
+                    input(type="text" name="name" placeholder="Your name" class="bg-transparent w-full" value="")
+                    textarea(name="message" placeholder="What´s happening?" class="bg-transparent w-full resize-none" value="")
+                    button(type="submit" class=" bg-sky-500 rounded-full text-white text-base self-end px-4 py-1 hover:bg-sky-600") Shoot 
+            div(class="bullets flex flex-col")
+                    each message in data
+                        div(class="bullet flex flex-col")
+                            div(class="flex")
+                                span=message.name
+                                span=message.added
+                            span=message.message
