@@ -13,11 +13,16 @@ html(lang="en")
                 form(action="/new", method="POST" class="flex flex-col gap-2 items-center justify-between grow")
                     input(type="text" name="name" placeholder="Your name" class="bg-transparent w-full" value="")
                     textarea(name="message" placeholder="What´s happening?" class="bg-transparent w-full resize-none" value="")
-                    button(type="submit" class=" bg-sky-500 rounded-full text-white text-base self-end px-4 py-1 hover:bg-sky-600") Shoot 
-            div(class="bullets flex flex-col")
-                    each message in data
-                        div(class="bullet flex flex-col")
-                            div(class="flex")
+                    button(type="submit" class="bg-sky-500 rounded-full text-white text-base self-end px-4 py-1 hover:bg-sky-600") Shoot 
+            div(class="bullets flex flex-col w-1/2 items-center gap-4")
+                if messages.length > 0
+                    each message in messages
+                        div(class="bullet flex flex-col bg-white w-full rounded-2xl p-4")
+                            div(class="flex flex-col text-sm mb-2")
                                 span=message.name
-                                span=message.added
+                                span(class="text-slate-400")=message.added
                             span=message.message
+                else
+                    div(class="bullet flex flex-col bg-white w-full rounded-2xl p-4")
+                        div(class="flex flex-col text-sm mb-2")
+                            span No bullets here...
