@@ -21,7 +21,8 @@ The application is called Bullet. A Bullet can be seen as a post.
 
 ## The Structure
 
-```puml
+```mermaid
+    sequenceDiagram
     Client -> Server:GET request (path: "/")
     Server -> Database:find().sort({added: -1})
     Database --> Server:JSONData
