@@ -17,7 +17,7 @@ The application is called Bullet. A Bullet can be seen as a post.
 
 - **💻 Backend:** ExpressJS
 - **📰 View engine:** Pug
-- **🌟 Styiling:** Tailwind
+- **🌟 Styling:** Tailwind
 - **💾 DB:** MognoDB
 - **🔀 ORM:** Mongoose
 
