@@ -572,6 +572,14 @@ video {
   width: 100%;
 }
 
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -681,4 +689,16 @@ video {
 .hover\:bg-sky-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-4\/5 {
+    width: 80%;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-4\/5 {
+    width: 80%;
+  }
 }
