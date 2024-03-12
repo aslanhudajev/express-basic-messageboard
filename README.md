@@ -1,3 +1,5 @@
+# [🌐 LIVE DEMO](https://express-basic-messageboard.fly.dev/)
+
 # Bullet - The Express Message Board
 
 This repository containt a very simple fullstack application.
@@ -7,7 +9,7 @@ The application is called Bullet. A Bullet can be seen as a post.
 
 - The importance of conditional rendering.
 - The importance of error handling.
-- What and ORM/ODM is.
+- What an ORM/ODM is.
 - How to use mongoose.
 - How to use Pug.
 
